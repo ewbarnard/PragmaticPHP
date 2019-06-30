@@ -1,0 +1,70 @@
+
+$_main: ; (lines=5, args=0, vars=0, tmps=1)
+    ; (before optimizer)
+    ; /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/src/Singleton/StatePark.php:1-31
+L0 (2):     NOP
+L1 (4):     NOP
+L2 (6):     EXT_STMT
+L3 (6):     NOP
+L4 (31):    RETURN int(1)
+
+App\Singleton\StatePark::__construct: ; (lines=7, args=1, vars=1, tmps=1)
+    ; (before optimizer)
+    ; /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/src/Singleton/StatePark.php:16-18
+L0 (16):    EXT_NOP
+L1 (16):    CV0($name) = RECV 1
+L2 (17):    EXT_STMT
+L3 (17):    ASSIGN_OBJ THIS string("name")
+L4 (17):    OP_DATA CV0($name)
+L5 (18):    EXT_STMT
+L6 (18):    RETURN null
+
+App\Singleton\StatePark::getInstance: ; (lines=29, args=1, vars=1, tmps=9)
+    ; (before optimizer)
+    ; /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/src/Singleton/StatePark.php:20-25
+L0 (20):    EXT_NOP
+L1 (20):    CV0($name) = RECV 1
+L2 (21):    EXT_STMT
+L3 (21):    INIT_NS_FCALL_BY_NAME 2 string("App\Singleton\array_key_exists")
+L4 (21):    EXT_FCALL_BEGIN
+L5 (21):    SEND_VAR_EX CV0($name) 1
+L6 (21):    V1 = FETCH_STATIC_PROP_FUNC_ARG 2 string("instances") (static) (exception)
+L7 (21):    SEND_VAR_EX V1 2
+L8 (21):    V2 = DO_FCALL
+L9 (21):    EXT_FCALL_END
+L10 (21):   T3 = BOOL_NOT V2
+L11 (21):   JMPZ T3 L21
+L12 (22):   EXT_STMT
+L13 (22):   V6 = NEW 1 (static) (exception)
+L14 (22):   EXT_FCALL_BEGIN
+L15 (22):   SEND_VAR_EX CV0($name) 1
+L16 (22):   DO_FCALL
+L17 (22):   EXT_FCALL_END
+L18 (22):   V4 = FETCH_STATIC_PROP_W string("instances") (static) (exception)
+L19 (22):   ASSIGN_DIM V4 CV0($name)
+L20 (22):   OP_DATA V6
+L21 (24):   EXT_STMT
+L22 (24):   V8 = FETCH_STATIC_PROP_R string("instances") (static) (exception)
+L23 (24):   V9 = FETCH_DIM_R V8 CV0($name)
+L24 (24):   VERIFY_RETURN_TYPE V9
+L25 (24):   RETURN V9
+L26 (25):   EXT_STMT
+L27 (25):   VERIFY_RETURN_TYPE
+L28 (25):   RETURN null
+LIVE RANGES:
+        6: L18 - L19 (tmp/var)
+        9: L24 - L25 (tmp/var)
+
+App\Singleton\StatePark::getName: ; (lines=8, args=0, vars=0, tmps=1)
+    ; (before optimizer)
+    ; /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/src/Singleton/StatePark.php:27-29
+L0 (27):    EXT_NOP
+L1 (28):    EXT_STMT
+L2 (28):    V0 = FETCH_OBJ_R THIS string("name")
+L3 (28):    VERIFY_RETURN_TYPE V0
+L4 (28):    RETURN V0
+L5 (29):    EXT_STMT
+L6 (29):    VERIFY_RETURN_TYPE
+L7 (29):    RETURN null
+LIVE RANGES:
+        0: L3 - L4 (tmp/var)

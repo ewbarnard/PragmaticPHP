@@ -1,0 +1,11 @@
+Testing started at 20:41 ...
+/Applications/MAMP/bin/php/php7.2.1/bin/php -c "/Library/Application Support/appsolute/MAMP PRO/conf/php7.2.1.ini" /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/vendor/phpunit/phpunit/phpunit --configuration /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/phpunit.xml.dist /Users/ewb/EducationStationProjects/Manuscript/PragmaticPHP/pragma/tests/TestCase --teamcity
+PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
+
+
+
+Time: 760 ms, Memory: 8.00MB
+
+OK (14 tests, 44 assertions)
+
+Process finished with exit code 0
